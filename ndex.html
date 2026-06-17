@@ -3,13 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Website</title>
+    <title>Dr. Eshwar Srinivasan | Personal Website</title>
     <style>
-        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #16a085;
+            --bg-color: #f8f9fa;
+            --text-color: #333333;
+            --light-text: #7f8c8d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header Style */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-info h1 {
+            margin: 0 0 10px 0;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+        }
+
+        .header-info .title {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+
+        .contact-links a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Section Layout */
+        section {
+            background: white;
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eaeded;
+            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        /* Timelines & Items */
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 576px) {
+            .item-header {
+                flex-direction: column;
+            }
+        }
+
+        .sub-title {
+            color: var(--accent-color);
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        /* Publications */
+        ol.publications {
+            padding-left: 20px;
+        }
+
+        ol.publications li {
+            margin-bottom: 15px;
+            padding-left: 5px;
+        }
+
+        .pub-links {
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+
+        .pub-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* Skills Tags */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skills-category h4 {
+            margin: 0 0 10px 0;
+            color: var(--secondary-color);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #eef2f3;
+            color: var(--secondary-color);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my website hosted on GitHub Pages.</p>
+
+    <div class="container">
+        
+        <header>
+            <img src="profile.jpg" alt="Dr. Eshwar Srinivasan" class="profile-img">
+            <div class="header-info">
+                <h1>Dr. Eshwar Srinivasan</h1>
+                <div class="title">Assistant Professor of Computer Science & Engineering</div>
+                <div class="contact-links">
+                    <span>📍 Amrita Vishwa Vidyapeetham, Coimbatore, TN, India</span>
+                    <a href="mailto:srireveshjay@gmail.com">✉️ Email</a>
+                    <a href="https://linkedin.com/in/eshwar-srinivasan-7a831a155/" target="_blank">🔗 LinkedIn</a>
+                    <a href="https://orcid.org/0000-0002-9233-1573" target="_blank">🆔 ORCID</a>
+                </div>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>Research Interests</h2>
+            <p>My core research areas are in <strong>Graph Theory, Combinatorics, and Theoretical Computer Science</strong>.</p>
+            <p>Currently, my work focuses on determining the minimal forbidden induced subgraph characterization of word-representability under restrictions to specific graph classes. In addition, I am actively developing a general framework for extending hereditary graph classes.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span>Assistant Professor</span>
+                    <span>April 2026 - Present</span>
+                </div>
+                <div class="sub-title">Department of Computer Science and Engineering, Amrita Vishwa Vidyapeetham, Coimbatore</div>
+            </div>
+            <div class="item">
+                <div class="item-header">
+                    <span>Senior Member - Supplier Development & Integration</span>
+                    <span>June 2018 - August 2020</span>
+                </div>
+                <div class="sub-title">Turbo Energy Private Limited, Chennai</div>
+                <p style="margin: 5px 0 0 0; font-size: 0.95rem;">Handled part development lifecycle from the initial design phase through to successful mass production stages.</p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="item">
+                <div class="item-header">
+                    <span>Indian Institute of Technology Guwahati</span>
+                    <span>July 2022 - April 2026</span>
+                </div>
+                <div class="sub-title">Ph.D. in Mathematics (CGPA: 7.33/10)</div>
+                <p style="margin: 5px 0 0 0; font-size: 0.95rem;"><em>Thesis:</em> Characterizations and properties of word-representable graph classes<br><em>Supervisor:</em> Dr. H. Ramesh</p>
+            </div>
+            <div class="item">
+                <div class="item-header">
+                    <span>National Institute of Technology Calicut</span>
+                    <span>June 2020 - June 2022</span>
+                </div>
+                <div class="sub-title">M.Sc. in Mathematics (CGPA: 9.13/10)</div>
+            </div>
+            <div class="item">
+                <div class="item-header">
+                    <span>SASTRA Deemed University, Thanjavur</span>
+                    <span>June 2014 - June 2018</span>
+                </div>
+                <div class="sub-title">B.Tech. in Mechanical Engineering (CGPA: 8.45/10)</div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Research Publications</h2>
+            <ol class="publications">
+                <li>
+                    <strong>Eshwar Srinivasan</strong> and Ramesh Hariharasubramanian. "Minimum length word-representants of word-representable graphs." <em>Discrete Applied Mathematics</em>, 343 (2024), 149-158.
+                    <div class="pub-links"><a href="https://doi.org/10.1016/j.dam.2023.10.021" target="_blank">DOI Link</a></div>
+                </li>
+                <li>
+                    <strong>Eshwar Srinivasan</strong> and Ramesh Hariharasubramanian. "Minimum length word-representants of graph products." <em>Discrete Applied Mathematics</em>, 358 (2024), 91-104.
+                    <div class="pub-links"><a href="https://doi.org/10.1016/j.dam.2024.07.002" target="_blank">DOI Link</a></div>
+                </li>
+                <li>
+                    <strong>Eshwar Srinivasan</strong> and Ramesh Hariharasubramanian. "On semi-transitive orientability of circulant graphs." <em>Discrete Applied Mathematics</em>, 377 (2025), 498-509.
+                    <div class="pub-links"><a href="https://doi.org/10.1016/j.dam.2025.08.025" target="_blank">DOI Link</a></div>
+                </li>
+                <li>
+                    <strong>Eshwar Srinivasan</strong> and Ramesh Hariharasubramanian. "Forbidden induced subgraph characterization of word-representable split graphs." (2025), <em>Communicated</em>.
+                </li>
+                <li>
+                    <strong>Eshwar Srinivasan</strong> and Ramesh Hariharasubramanian. "Forbidden induced subgraph characterization of word-representable co-bipartite graphs." (2025), <em>Communicated</em>.
+                </li>
+                <li>
+                    <strong>Eshwar Srinivasan</strong> and Ramesh Hariharasubramanian. "Weighted Clique and Independent Set in Edge-Distant Hereditary Graphs." (2026), <em>Communicated</em>.
+                </li>
+            </ol>
+        </section>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h4>Languages</h4>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">C</span>
+                        <span class="tag">C++</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Tools & Frameworks</h4>
+                    <div class="tags">
+                        <span class="tag">MATLAB®</span>
+                        <span class="tag">MS Office</span>
+                    </div>
+                </div>
+                <div class="skills-category">
+                    <h4>Documentation</h4>
+                    <div class="tags">
+                        <span class="tag">LaTeX</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Dr. Eshwar Srinivasan. Built using GitHub Pages.</p>
+    </footer>
+
 </body>
 </html>
