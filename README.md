@@ -2,7 +2,7 @@
 
 Welcome to the GitHub repository for my personal academic website. This site showcases my academic profile, teaching, and research contributions in Theoretical Computer Science and Discrete Mathematics.
 
-👉 **View the live website here:** [https://srireveshjay.github.io/eshwarsrinivasan/](https://srireveshjay.github.io/eshwarsrinivasan/)
+👉 **View the live website here:** [https://srireveshjay/eshwarsrinivasan.github.io/](https://srireveshjay/eshwarsrinivasan.github.io/)
 
 ---
 
